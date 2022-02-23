@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
  
 const parser = new ArgumentParser({
-  description: 'Photo Classifier'
+    description: 'Photo Classifier'
 });
 
 parser.add_argument('-v', '--version', { action: 'version', version });
@@ -29,8 +29,8 @@ for (const classifiedSubDir of classifiedSubDirs) {
 }
 
 fs.promises.readdir(args.photo_dir)
-.then(processFiles)
-.catch(console.error);
+    .then(processFiles)
+    .catch(console.error);
 
 function processFiles(files) {
     files.forEach((file) => {
